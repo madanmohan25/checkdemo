@@ -1,9 +1,2 @@
 #!/bin/bash
-echo "This is a test" > test.txt
-
-# Update instance packages
-yum -y check-update
-
-# Download and install Node.js
-yum install -y epel-release
-yum install -y nodejs npm --enablerepo=epel
+rpm -ivh https://kojipkgs.fedoraproject.org//packages/http-parser/2.7.1/3.el7/x86_64/http-parser-2.7.1-3.el7.x86_64.rpm && yum -y install nodejs
